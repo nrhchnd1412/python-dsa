@@ -1,0 +1,61 @@
+class Stack:
+    def __init__(self):
+        self.stack=[]
+    
+    def __str__(self):
+        return "-".join(map(str,self.stack))
+
+    def push(self,value):
+        self.stack.append(value)
+
+    def pop(self):
+        if not self.stack:
+            return None
+        return self.stack.pop()
+    
+    def peek(self):
+        if not self.stack:
+            return None
+        return self.stack[-1]
+    
+    def is_empty(self):
+        return not bool(self.stack)
+    
+    def size(self):
+        return len(self.stack)
+
+class Queue:
+    def __init__(self):
+        self.stack1=Stack()
+        self.stack2=Stack()
+
+    def transfer_s1_to_s2(self):
+        while not self.stack1.is_empty():
+            self.stack2.push(self.stack1.pop())
+
+    def is_empty(self):
+        return self.stack1.is_empty() and self.stack2.is_empty()
+
+    def size(self):
+        return self.stack1.size() + self.stack2.size()
+
+    def enque(self,value):
+        self.stack1.push(value)
+    
+    def deque(self):
+        if self.is_empty():
+            return None
+        if self.stack2.is_empty():
+            self.transfer_s1_to_s2()
+        return self.stack2.pop()
+
+q=Queue()
+q.enque(1)
+q.enque(2)
+
+print(q.deque())
+q.enque(3)
+q.enque(4)
+print(q.deque())
+print(q.deque())
+print(q.deque())
