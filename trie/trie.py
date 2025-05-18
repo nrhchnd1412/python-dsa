@@ -47,27 +47,27 @@ class Trie:
         for char,child_node in node.children.items():
             self._dfs(child_node,prefix+char,results)
 
-    def delete(self,word):
-        word_found=[False]
+    def delete_word(self,word):
+        word_deleted=[False]
         if not self.search(word):
             return False
-        def _delete_recursive(node,word,index):
-            if index==len(word):
+        def _delete(node,word,index=0):
+            if len(word)==index:
                 if node.is_end_of_word:
                     node.is_end_of_word=False
-                    word_found[0]=True
+                    word_deleted[0]=True
                     return len(node.children)==0
                 return False
-            char=word[index]
-            if char not in node.children:
+            ch=word[index]
+            if ch not in node.children:
                 return False
-            should_delete_child=_delete_recursive(node.children[char],word,index+1)
+            should_delete_child=_delete(node.children[ch],word,index+1)
             if should_delete_child:
-                del node.children[char]
+                del node.children[ch]
                 return not node.is_end_of_word and len(node.children)==0
             return False
-        _delete_recursive(self.root_node,word,0)
-        return word_found[0]
+        _delete(self.root_node,word)
+        return word_deleted[0]
     
     def count_all_words(self):
         def _count(node):
@@ -89,5 +89,5 @@ trie.insert('inkling')
 print(trie.search('ink'))
 print(trie.starts_with('inklo'))
 print(trie.count_all_words())
-print(trie.delete('camera'))
+print(trie.delete_word('camera'))
 print(trie.get_all_words('ca'))
