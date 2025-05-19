@@ -5,6 +5,7 @@ bubble sort
 def bubble_sort(my_arr):
     n= len(my_arr)
     for i in range(n):
+        # after each pass, largest element is moved to extreme right
         swapped=False
         for j in range(n-i-1):
             if my_arr[j]>my_arr[j+1]:
