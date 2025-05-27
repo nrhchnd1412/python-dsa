@@ -1,5 +1,5 @@
 '''
-Kahn's topological sort
+Kahn's topological sort (BFS)
 '''
 
 from collections import defaultdict, deque
