@@ -1,12 +1,12 @@
 '''
 topological sort: DAGs
 '''
-
+from collections import defaultdict
 
 class Graph:
     def __init__(self,V):
         self.V=V
-        self.adj_list={i:[] for i in range(V)}
+        self.adj_list=defaultdict(list)
     
     def add_edge(self,u,v):
         self.adj_list[u].append(v)
