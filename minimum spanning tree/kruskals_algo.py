@@ -35,7 +35,7 @@ graph in the form (w,u,v)
 [(1,0,1),(2,0,2)]
 '''
 def kruskal_mst(edge_list):
-    ds=DisjointSet(6)
+    ds=DisjointSet(7)
     edge_list.sort()
     mst_weight=0
     mst_edges=[]
@@ -53,7 +53,8 @@ edge_list = [
     (2, 1, 2),
     (4, 1, 3),
     (5, 2, 4),
-    (6, 3, 4)
+    (6, 3, 4),
+    (7,5,6) # forst of MST
 ]
 
 mst_weight,mst_edges=kruskal_mst(edge_list)
