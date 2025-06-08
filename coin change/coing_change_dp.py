@@ -8,7 +8,6 @@ Goal: Find the minimum number of coins required to make up that amount.
 If it's not possible, return -1.
 '''
 
-
 def coin_change_dp(coins,amt):
     dp =[float("inf")]*(amt+1)
     dp[0]=0
