@@ -8,6 +8,8 @@ A maximum weight W that the knapsack can carry
 Goal:
 
 Maximize total value, but you can either take an item or leave it — no partial/fractional items allowed.
+Time complexity: O(n * W)
+Space : O(n * W)
 '''
 
 def knapsack_01(values,weights,capacity):
@@ -23,7 +25,9 @@ def knapsack_01(values,weights,capacity):
                 dp[i][w]=max(value_if_included,value_if_excluded)
             else:
                 dp[i][w]=dp[i-1][w]
-    return dp[n][w]
+    for row in dp:
+        print(row)
+    return dp[n][capacity]
 
 # Test
 values = [1, 2, 3]
@@ -31,4 +35,4 @@ weights = [4, 5, 1]
 capacity= 4
 
 print("Maximum value:", knapsack_01(values, weights, capacity)) # output: 3
-print(knapsack_01([60, 100, 120], [10, 20, 30], 50))
+#print(knapsack_01([60, 100, 120], [10, 20, 30], 50))

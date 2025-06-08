@@ -6,6 +6,8 @@ A total amount: amount = 11
 Goal: Find the minimum number of coins required to make up that amount.
 
 If it's not possible, return -1.
+
+Time complexity: O(n * A)
 '''
 
 def coin_change_dp(coins,amt):
