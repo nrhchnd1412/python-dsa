@@ -39,3 +39,4 @@ items = [
 capacity = 50
 
 print(f"Maximum value in knapsack: {find_max_knapsack_value(items,capacity)}")
+#output 240.0
