@@ -28,7 +28,7 @@ def min_edit_distance(str1,str2):
                 dp[i][j]=1+min(
                     dp[i-1][j], #delete
                     dp[i][j-1], #insert
-                    dp[i-1][j-1]
+                    dp[i-1][j-1] #replace
                 )
     return dp[m][n]
 
