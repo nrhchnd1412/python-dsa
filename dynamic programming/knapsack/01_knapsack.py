@@ -16,15 +16,15 @@ def knapsack_01(values,weights,capacity):
     n = len(values)
     dp =[[0 for _ in range(capacity+1)] for _ in range(n+1)]
     for i in range(1,n+1):
-        for w in range(1,capacity+1):
-            if weights[i-1]<=w:
+        for j in range(1,capacity+1):
+            if weights[i-1]<=j:
                 #value if we include
-                value_if_included = values[i-1]+dp[i-1][w-weights[i-1]]
+                value_if_included = values[i-1]+dp[i-1][j-weights[i-1]]
                 #value if excluded
-                value_if_excluded= dp[i-1][w]
-                dp[i][w]=max(value_if_included,value_if_excluded)
+                value_if_excluded= dp[i-1][j]
+                dp[i][j]=max(value_if_included,value_if_excluded)
             else:
-                dp[i][w]=dp[i-1][w]
+                dp[i][j]=dp[i-1][j]
     for row in dp:
         print(row)
     return dp[n][capacity]
