@@ -29,5 +29,5 @@ def rob_house_space_optimized(nums):
 
 nums = [2, 7, 9, 3, 1]
 
-print(rob_house_dp(nums))
+print(rob_house_dp(nums)) # output 12
 print(rob_house_space_optimized(nums))
