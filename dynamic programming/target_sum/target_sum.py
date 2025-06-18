@@ -14,6 +14,6 @@ def count_ways_to_sum(N,nums):
             dp[i]+=dp[i-num]
     return dp[N]
 
-N = 4
-nums = [1, 2, 3]
+N = 11
+nums = [1, 2, 5]
 print(count_ways_to_sum(N, nums)) 
