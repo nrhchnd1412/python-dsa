@@ -35,4 +35,4 @@ grid = [
 ]
 target_cost = 12
 
-print(count_paths_with_cost(grid, target_cost))
+print(count_paths_with_cost(grid, target_cost)) #output 2
