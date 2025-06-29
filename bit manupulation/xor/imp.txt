@@ -1,0 +1,3 @@
+x ⊕ x = 0 → XOR-ing a number with itself cancels it out.
+x ⊕ 0 = x → XOR-ing a number with 0 gives the number itself.
+XOR is associative and commutative → order doesn’t matter.
