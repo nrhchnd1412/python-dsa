@@ -1,0 +1,25 @@
+🔢 Classic Backtracking Problems
+Problem	Description	LeetCode Link
+1. Subsets	Generate all possible subsets (the power set).	LC 78 – Subsets
+2. Subsets II	Like Subsets, but with duplicates in input.	LC 90 – Subsets II
+3. Permutations	Generate all permutations of distinct numbers.	LC 46 – Permutations
+4. Permutations II	Permutations of array with duplicates.	LC 47 – Permutations II
+5. Combination Sum	Find all combinations that sum to a target (unlimited reuse of elements).	LC 39 – Combination Sum
+6. Combination Sum II	Same as above, but no reuse and input has duplicates.	LC 40 – Combination Sum II
+7. Letter Combinations of a Phone Number	Generate all valid letter combinations.	LC 17 – Letter Combinations
+8. Generate Parentheses	Generate all combinations of valid parentheses.	LC 22 – Generate Parentheses
+
+👑 Famous Puzzles (Backtracking + Constraints)
+Problem	Description	LeetCode Link
+9. N-Queens	Place N queens on an NxN board.	LC 51 – N-Queens
+10. Sudoku Solver	Fill a 9x9 board with valid digits.	LC 37 – Sudoku Solver
+11. Word Search	Check if a word exists in a 2D grid (DFS + backtrack).	LC 79 – Word Search
+12. Palindrome Partitioning	Partition a string into palindromes.	LC 131 – Palindrome Partitioning
+13. Restore IP Addresses	Split string into valid IPs.	LC 93 – Restore IP Addresses
+
+🔍 Advanced + Variants
+Problem	Description	LeetCode Link
+14. Combinations	Choose k elements out of n.	LC 77 – Combinations
+15. Reconstruct Itinerary	DFS + backtracking to form valid travel order.	LC 332 – Reconstruct Itinerary
+16. Matchsticks to Square	Partition matchsticks into 4 equal groups.	LC 473 – Matchsticks to Square
+17. Expression Add Operators	Insert operators to reach a target number.	LC 282 – Expression Add Operators
