@@ -8,10 +8,8 @@ Constraints:
 All numbers are distinct
 Reuse allowed
 
-Time: O(N^T) where N = number of candidates
-    T = target / smallest candidate
-
-Space: O(T + output size)
+# time: O(2^n * k)
+# Space: o(2^n *k)
 '''
 
 def unique_combinations_with_reuse(candidates,target):

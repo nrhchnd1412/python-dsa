@@ -10,9 +10,8 @@ Duplicates present
 Reuse NOT allowed
 Output should have unique combinations (no duplicate sets)
 
-Time: O(2^N)
-
-Space: O(N + output size)
+# time: O(2^n * k)
+# Space: o(2^n *k)
 '''
 
 def combination_without_reuse(candidates,target):

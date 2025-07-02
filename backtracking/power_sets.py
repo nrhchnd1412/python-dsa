@@ -6,7 +6,8 @@ The solution must not contain duplicate subsets.
 You can return the subsets in any order.
 
 Time Complexity: O(2ⁿ × n)
-Space Complexity: O(2ⁿ) for storing all subsets
+Space Complexity: O(2ⁿ) for storing all subsets (excluding output)
+Space: O(2^n * n): including output
 '''
 
 def powersets(nums):
