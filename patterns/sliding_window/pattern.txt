@@ -1,0 +1,126 @@
+🔹 Pattern 1: Fixed-size Sliding Window
+Window size is given/fixed. You just move the window forward by 1 each time.
+
+🔸 Common Use-Cases:
+Maximum/Minimum sum or average of k elements
+
+Basic frequency counts
+
+🔸 Problems:
+Maximum Sum Subarray of Size K – [LC Easy]
+
+Maximum Average Subarray I – [LC 643]
+
+Find the Kth Largest Sum of a Subarray – [Hard] (variation)
+
+Max Consecutive Ones III (or II if no flips) – [LC 1004 / 487]
+
+Number of Subarrays of Size K and Average ≥ Threshold – [LC 1343]
+
+🔹 Pattern 2: Variable-size / Shrinking Sliding Window
+Window size is dynamic, and you shrink from the left to satisfy a condition.
+
+🔸 Common Use-Cases:
+Substrings/subarrays with sum or character frequency constraints
+
+Minimizing length
+
+🔸 Problems:
+Minimum Size Subarray Sum – [LC 209]
+
+Longest Substring Without Repeating Characters – [LC 3]
+
+Longest Substring with At Most K Distinct Characters – [LC 340]
+
+Fruit Into Baskets – [LC 904]
+
+Longest Subarray with Sum ≤ K – [Binary search + prefix sum + sliding window]
+
+🔹 Pattern 3: Character/Frequency Count in Window
+Maintain frequency maps for character counts in current window. Often used with hashmaps.
+
+🔸 Common Use-Cases:
+Anagrams
+
+Matching permutations
+
+Frequency-based window matches
+
+🔸 Problems:
+Permutation in String – [LC 567]
+
+Minimum Window Substring – [LC 76]
+
+Find All Anagrams in a String – [LC 438]
+
+Longest Repeating Character Replacement – [LC 424]
+
+Sliding Window Maximum – [LC 239] (Use deque for optimization)
+
+🔹 Pattern 4: Monotonic Queue / Deque Based
+Used when you need to maintain a maximum or minimum within the window in O(1) time.
+
+🔸 Common Use-Cases:
+Maximum in current window
+
+Minimums for stock span or temperatures
+
+🔸 Problems:
+Sliding Window Maximum – [LC 239]
+
+Shortest Subarray with Sum ≥ K – [LC 862]
+
+Daily Temperatures – [LC 739] (Stack variant)
+
+Sum of Min and Max of all Subarrays of size K – [Custom Pattern]
+
+🔹 Pattern 5: Binary Search + Sliding Window
+When finding optimal window size or minimizing/maximizing condition with binary search.
+
+🔸 Problems:
+Minimum Number of Days to Make m Bouquets – [LC 1482]
+
+Longest Subarray with Absolute Diff ≤ Limit – [LC 1438]
+
+Longest Substring with At Most K Distinct Characters – [LC 340]
+
+🔹 Pattern 6: Two Pointer (Sliding Window Style)
+Use two pointers to extend/shrink window, often without maintaining an explicit window structure.
+
+🔸 Problems:
+Subarray Product Less Than K – [LC 713]
+
+Count Number of Nice Subarrays (Odd Count) – [LC 1248]
+
+Longest Mountain in Array – [LC 845]
+
+Continuous Subarray Sum – [LC 523]
+
+Max Consecutive Ones II – [LC 487]
+
+🔹 Pattern 7: Count of Subarrays Matching Condition
+Count how many subarrays satisfy a condition using inclusion-exclusion.
+
+🔸 Problems:
+Count Number of Substrings Containing All Three Characters – [LC 1358]
+
+Number of Substrings with Exactly K Distinct Characters – [LC Hard Variant]
+
+Subarrays with K Different Integers – [LC 992]
+
+🔹 Pattern 8: Sliding Window with Heaps
+Used to keep track of median, or dynamic k-th largest/smallest elements.
+
+🔸 Problems:
+Sliding Window Median – [LC 480]
+
+Median of Two Sorted Arrays – [LC 4] (Binary Search but sliding window logic helps)
+
+🔹 Bonus Tips to Recognize Patterns:
+Pattern	Keywords to Look For in Problem
+Fixed-size	“of size k”, “length k”
+Shrinking window	“minimum length”, “longest subarray”
+Frequency match	“permutation”, “anagram”, “substring with same characters”
+Monotonic deque	“max/min in window”, “sliding max”
+Two pointers	“subarray with product/sum”, “exactly k”
+Heaps + sliding	“median”, “k-th element in window”
