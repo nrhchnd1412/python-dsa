@@ -5,8 +5,8 @@ Given an integer array nums that may contain duplicates, return all possible sub
 
 The solution set must not contain duplicate subsets, and the elements in a subset can be in any order.
 
-Time Complexity: O(2ⁿ × n)
-Space Complexity: O(2ⁿ) for storing all subsets
+Time Complexity: O(2ⁿ × n) (though runtime complexity is less due to duplicates being removed)
+Space Complexity: O(2ⁿ * n) for storing all subsets
 '''
 
 def power_set(nums):

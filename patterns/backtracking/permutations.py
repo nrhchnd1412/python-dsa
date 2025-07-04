@@ -6,8 +6,8 @@ Given an array nums of distinct integers, return all the possible permutations o
 '''
 
 def permutations(nums):
-    # Time Complexity: O(n!) — Total permutations of n distinct elements.
-    # Space Complexity: O(n)
+    # Time Complexity: O(n! *n) — Total permutations of n distinct elements (including output) else O(n!)
+    # Space Complexity: O(n! * n)-- including output else O(n)
     def backtrack(path,used):
         if len(path)==len(nums):
             results.append(path[:])
@@ -52,5 +52,5 @@ def permutations_with_duplicates(nums):
     backtrack([],used)
     return results
 
-print(permutations([1,1,2]))
-print(permutations_with_duplicates([1,1,2]))
+print(permutations([1,2,3])) # [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+print(permutations_with_duplicates([1,1,2])) # [[1, 1, 2], [1, 2, 1], [2, 1, 1]]
