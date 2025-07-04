@@ -1,0 +1,7 @@
+✅ Kadane’s Algorithm Logic:
+
+We iterate through the array and at each position i, we ask:
+
+Should we continue the previous subarray (current_sum + nums[i])?
+Or start a new subarray from nums[i]?
+We keep track of the current maximum sum ending at this index and update the global max whenever it increases.
