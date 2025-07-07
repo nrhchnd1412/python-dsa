@@ -13,4 +13,4 @@ def max_sum_subarray_sliding_window(arr,k):
         max_sum=max(max_sum,window_sum)
     return max_sum
 
-print(max_sum_subarray_sliding_window([1,2,10,4,5,6],3))
+print(max_sum_subarray_sliding_window([1,2,10,4,5,6],3)) #19

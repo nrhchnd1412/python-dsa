@@ -20,4 +20,4 @@ def longest_subarray_with_sum(nums,target):
         max_length=max(max_length,right-left+1)
     return max_length
 
-print(longest_subarray_with_sum([1, 2, 1, 0, 1, 1, 0],4))
+print(longest_subarray_with_sum([1, 2, 1, 0, 1, 1, 0],4)) #5
