@@ -27,7 +27,7 @@ class FindWord:
     def check_word(self,word,w):
         f1=self.create_freq(word)
         f2=self.create_freq(w)
-        return f1<=f2
+        return bool(all(f1[idx]<=f2[idx] for idx in range(26)))
 
 def find(words,w):
     w1=Counter(w)
