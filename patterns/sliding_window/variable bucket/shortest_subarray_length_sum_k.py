@@ -34,6 +34,8 @@ def shortest_subarray(arr,k):
 print(shortest_subarray([2, -1, 2], 3))   # Output: 3
 print(shortest_subarray([1, 2], 4))       # Output: -1
 print(shortest_subarray([1, 2, 3, 4, 5], 11))  # Output: 3
+print(shortest_subarray([2,3,1,2,4,3], 7))  # Output: 2
+
 
 '''
 📌 WHY We Remove from the Back:
